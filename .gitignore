@@ -1,3 +1,8 @@
-docker-volumes
 */node_modules
-secrets.md
+docker-volumes/secrets.md
+docker-volumes/cache
+docker-volumes/data
+docker-volumes/docker-volumes
+docker-volumes/elasticsearch-data
+docker-volumes/mysql
+docker-volumes/postgres
