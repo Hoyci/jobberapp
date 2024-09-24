@@ -1,5 +1,6 @@
 import http from 'http';
 
+import 'express-async-errors';
 import { Application, json, NextFunction, Request, Response, urlencoded } from 'express';
 import hpp from 'hpp';
 import helmet from 'helmet';

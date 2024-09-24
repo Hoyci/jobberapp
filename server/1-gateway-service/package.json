@@ -20,7 +20,7 @@
   "description": "",
   "dependencies": {
     "@elastic/elasticsearch": "^8.15.0",
-    "@hoyci/jobber-shared": "^0.0.3",
+    "@hoyci/jobber-shared": "^0.0.6",
     "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "compression": "^1.7.4",

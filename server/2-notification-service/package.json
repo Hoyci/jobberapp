@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@elastic/elasticsearch": "^8.15.0",
-    "@hoyci/jobber-shared": "^0.0.3",
+    "@hoyci/jobber-shared": "^0.0.6",
     "@types/amqplib": "^0.10.5",
     "@types/email-templates": "^10.0.4",
     "@types/express": "^4.17.21",

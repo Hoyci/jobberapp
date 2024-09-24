@@ -40,7 +40,7 @@ export async function getAuthUserById(authId: number): Promise<IAuthDocument> {
     }
   })) as Model;
 
-  return user.dataValues;
+  return user?.dataValues;
 }
 
 export async function getAuthUserByUsernameOrEmail(username: string, email: string): Promise<IAuthDocument> {
@@ -50,7 +50,7 @@ export async function getAuthUserByUsernameOrEmail(username: string, email: stri
     }
   })) as Model;
 
-  return user.dataValues;
+  return user?.dataValues;
 }
 
 export async function getAuthUserByUsername(username: string): Promise<IAuthDocument> {
@@ -60,7 +60,7 @@ export async function getAuthUserByUsername(username: string): Promise<IAuthDocu
     }
   })) as Model;
 
-  return user.dataValues;
+  return user?.dataValues;
 }
 
 export async function getAuthUserByEmail(email: string): Promise<IAuthDocument> {
@@ -70,7 +70,7 @@ export async function getAuthUserByEmail(email: string): Promise<IAuthDocument> 
     }
   })) as Model;
 
-  return user.dataValues;
+  return user?.dataValues;
 }
 
 export async function getAuthUserByVerificationToken(token: string): Promise<IAuthDocument> {
@@ -83,7 +83,7 @@ export async function getAuthUserByVerificationToken(token: string): Promise<IAu
     }
   })) as Model;
 
-  return user.dataValues;
+  return user?.dataValues;
 }
 
 export async function getAuthUserByPasswordToken(token: string): Promise<IAuthDocument> {
@@ -93,7 +93,7 @@ export async function getAuthUserByPasswordToken(token: string): Promise<IAuthDo
     }
   })) as Model;
 
-  return user.dataValues;
+  return user?.dataValues;
 }
 
 export async function updateVerifyEmailField(authId: number, emailVerified: number, emailVerificationToken: string): Promise<void> {

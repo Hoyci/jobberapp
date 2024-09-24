@@ -2,11 +2,10 @@ import crypto from 'crypto';
 
 import { signUpSchema } from '@auth/schemes/signup';
 import { createAuthUser, getAuthUserByUsernameOrEmail, signToken } from '@auth/services/auth.service';
-import { BadRequestError, firstLetterUppercase, IAuthDocument, IEmailMessageDetails, uploads } from '@hoyci/jobber-shared';
+import { BadRequestError, firstLetterUppercase, IAuthDocument, IEmailMessageDetails, lowerCase, uploads } from '@hoyci/jobber-shared';
 import { UploadApiResponse } from 'cloudinary';
 import { Request, Response } from 'express';
 import { v4 as uuidv4 } from 'uuid';
-import { lowerCase } from 'lodash';
 import { config } from '@auth/config';
 import { publishDirectMessage } from '@auth/queues/auth.producer';
 import { authChannel } from '@auth/server';
@@ -15,7 +14,10 @@ import { StatusCodes } from 'http-status-codes';
 export async function create(req: Request, res: Response): Promise<void> {
   const { error } = await Promise.resolve(signUpSchema.validate(req.body));
 
+  console.log('deu merda na validação', error);
+
   if (error?.details) {
+    console.log('entrei aqui', error.details[0].message);
     throw new BadRequestError(error.details[0].message, 'SignUp create() method error');
   }
 

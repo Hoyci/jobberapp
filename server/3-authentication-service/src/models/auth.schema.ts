@@ -86,6 +86,7 @@ AuthModel.prototype.hashPassword = async function (password: string): Promise<st
   return hash(password, SALT_ROUND);
 };
 
+// if (process.env.NODE_ENV !== 'test') {
+// }
 AuthModel.sync({});
-
 export { AuthModel };
